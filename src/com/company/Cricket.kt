@@ -1,6 +1,6 @@
 package com.company
 
-class Cricket : Subject {
+class Cricket(var score: Int) : Subject {
 
     private var observerlist: ArrayList<Observer> = arrayListOf()
 
@@ -19,6 +19,6 @@ class Cricket : Subject {
     }
 
     val notify = { ob: Observer ->
-        ob.update("hello" + ob.toString())
+        ob.update("$score                ${ob.toString()}")
     }
 }
